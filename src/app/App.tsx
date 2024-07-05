@@ -2,7 +2,6 @@ import React from "react";
 import "../css/app.css";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { RippleBadge } from "./material/MaterialTheme/styled";
-import { orange } from "@mui/material/colors";
 
 function App() {
   return (
