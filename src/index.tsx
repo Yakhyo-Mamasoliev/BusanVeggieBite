@@ -10,11 +10,13 @@ import "./css/index.css";
 import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom";
 
-const container = document.getElementById("root")!;
-const root = createRoot(container);
+// Retrieve the DOM element with the id "root"
+const container = document.getElementById("root")!; 
+// Retrieve the DOM element with the id "root"
+const root = createRoot(container); 
 
-root.render(
-  <React.StrictMode>
+root.render( // method is used to render the React application into the DOM
+  <React.StrictMode>  
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
