@@ -1,7 +1,7 @@
 {
   "name": "burak-react",
   "version": "0.1.0",
-  "description": "This is burack react redux frontend project",
+  "description": "This is burak react redux frontend project",
   "private": true,
   "scripts": {
     "start": "set PORT=3000 && react-scripts start",
