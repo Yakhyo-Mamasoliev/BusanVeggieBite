@@ -102,7 +102,7 @@ git push origin or master
 git status
 git reset --hard => (discards last changes)
 git log --oneline => shows git commits
-git commit --amend => is used in Git to modify the most recent commit (not yet pushed one only)
+git commit --amend -m "abc" => is used in Git to modify the most recent commit (not yet pushed one only)
 
 res.render("home");, it's telling the server to use a template named "home" to create a web page.
 
@@ -329,8 +329,13 @@ useEffect hook has 2 arg 1. CallBack function 2. array dependency eg:
     console.log("ComponentDidMount"); // DATA Fetch
 }, [array]);  //empty array => function only works once. if it has value and when value changes it also changes
 
+ useState
+When you call useState, it returns an array with two elements:
+Current State Value: The current value of the state.
+Setter Function: A function to update the state.
+
 const [value, setValue] = useState<boolean>(true);
-  // here useState has two arg 1. value its type is boolean, with initial value true. 2.setValue function to update value 
+  // useState hook returns 2 values in array 1. value its type is boolean, with initial value true. 2.setValue function to update value 
   [] are used for array destructuring.
 
 dependency array is an array of values that the effect or memoized value depends on.
@@ -384,15 +389,40 @@ Review run of project
   - serve -s build
   - yarn global add serve- 
        - Local:   http://localhost:3000 
-   │   - Network:  http://192.168.1.234:3000 
+       - Network:  http://192.168.1.234:3000 
+
+Learn Redux architecture of our project
+  - library but most famous when its is used with react 
+  - Redux is based on Flux architecture
+  1. Vie/UI
+  2. Action = Action Creator + Action Type 
+  3. Reducer
+  4. Store
+
+  Additional Concept
+    1. dispatch(so called 'slice') => Sends actions to the store to update the state.
+      Action => Reducer 
+    2. subscribe(so called 'selector') => Listens for state changes in the store. 
+      Reducer => Store => View/UI
+
+  - Follows the unidirectional data flow => one orderly direction
+  - MVC we can use it for both front and backend, but no store
+  - Redux, mostly or only used for frontend with react and other libraries. It has one store(storage)
+  - MVC. Controllers handle entire logic
+  - Redux. Reducer handle entire logic Action => Reducer => Store => View/UI
+  - Debugging is the process of finding and fixing errors or bugs in the source code of any software.
+    easier in Redux than MVC
+
+Pros of Redux Toolkit
+  - Redux Toolkit makes it easier to write good Redux applications and speeds up development,
+
+ 
 
 
 
 
 
-
-
-*/
+37mins  */
 
 // TODO: questions
 // What is Destruction
