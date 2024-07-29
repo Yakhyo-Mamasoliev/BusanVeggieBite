@@ -323,6 +323,17 @@ LESSON 55 Develop Products Frontend Page
 // State in React is a built-in object that is used to contain data or information about the component. State can change over time, and when it does, the component re-renders
 // Lifecycle Methods in React are special methods that get called at different stages of a component's life, such as when it is created, updated, or removed from the DOM.
 // In functional components, these lifecycle methods can be managed using the useEffect hook.
+//useEffect hook has 2 arg 1. CallBack function 2. array dependency eg:
+
+/* useEffect(() => {
+    console.log("ComponentDidMount"); // DATA Fetch
+}, [array]); */ //empty array => function only works once. if it has value and when value changes it also changes
+/** const [value, setValue] = useState<boolean>(true);
+ * // here useState has two arg 1. value its type is boolean, with initial value true. 2.setValue function to update value */
+//  [] are used for array destructuring.
+
+// dependency array is an array of values that the effect or memoized value depends on.
+
 // //@ts-nocheck => do not check ( at the beginning react file)
 // in react classes has use-state but functions do not so we use hooks to use use-state in functions
 // React component lifecycle methods:
@@ -343,6 +354,16 @@ LESSON 55 Develop Products Frontend Page
 // 1. Mounting (create) => componentDidMount
 // 2. Updating (update) => componentDidUpdate
 // 3. Unmounting (remove) => componentWillUnmount
+// eg:
+/*
+  useEffect(() => {
+    console.log("ComponentDidMount", count); // 1. ComponentDidMount
+    setCount(count + 1);
+    return () => { // 3. ComponentWillUnmount
+      console.log("ComponentWillUnmount");
+    };
+  }, [value]); // => 2. ComponentDidUpdate
+*/
 // Webpage: What you see rendered in your browser, including text, images, and other content.
 // DOM: The representation of the webpage's structure that your browser creates from the HTML document. It includes elements, attributes, and text as nodes in a tree structure.
 
