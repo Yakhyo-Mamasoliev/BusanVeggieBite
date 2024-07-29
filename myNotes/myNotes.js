@@ -314,48 +314,49 @@ LESSON 55 Develop Products Frontend Page
 // Number (capital letter): to convert eg: page: Number(page)
 // number (lowercase letter): ts related eg: memberPoints: number
 
-// 78-78
-// Hooks - useState and useEffect React Hooks
-// React Functional components - any function used in react, for components we use function not class in react
-// Hooks are functions in React that let you use state and other React features in functional components, without needing class components. It allows to catch changes in operations
-// to use states we use use-state hook
-// to use life cycle methods we use use-effect
-// State in React is a built-in object that is used to contain data or information about the component. State can change over time, and when it does, the component re-renders
-// Lifecycle Methods in React are special methods that get called at different stages of a component's life, such as when it is created, updated, or removed from the DOM.
-// In functional components, these lifecycle methods can be managed using the useEffect hook.
-//useEffect hook has 2 arg 1. CallBack function 2. array dependency eg:
+/* 78
+Hooks - useState and useEffect React Hooks
+React Functional components - any function used in react, for components we use function not class in react
+Hooks are functions in React that let you use state and other React features in functional components, without needing class components. It allows to catch changes in operations
+to use states we use use-state hook
+to use life cycle methods we use use-effect
+State in React is a built-in object that is used to contain data or information about the component. State can change over time, and when it does, the component re-renders
+Lifecycle Methods in React are special methods that get called at different stages of a component's life, such as when it is created, updated, or removed from the DOM.
+In functional components, these lifecycle methods can be managed using the useEffect hook.
+useEffect hook has 2 arg 1. CallBack function 2. array dependency eg:
 
-/* useEffect(() => {
+ useEffect(() => {
     console.log("ComponentDidMount"); // DATA Fetch
-}, [array]); */ //empty array => function only works once. if it has value and when value changes it also changes
-/** const [value, setValue] = useState<boolean>(true);
- * // here useState has two arg 1. value its type is boolean, with initial value true. 2.setValue function to update value */
-//  [] are used for array destructuring.
+}, [array]);  //empty array => function only works once. if it has value and when value changes it also changes
 
-// dependency array is an array of values that the effect or memoized value depends on.
+const [value, setValue] = useState<boolean>(true);
+  // here useState has two arg 1. value its type is boolean, with initial value true. 2.setValue function to update value 
+  [] are used for array destructuring.
 
-// //@ts-nocheck => do not check ( at the beginning react file)
-// in react classes has use-state but functions do not so we use hooks to use use-state in functions
-// React component lifecycle methods:
-// 1. Mounting (create)
-//    - constructor
-//    - static getDerivedStateFromProps
-//    - render
-//  + - componentDidMount
-// 2. Updating (update)
-//    - static getDerivedStateFromProps
-//    - shouldComponentUpdate
-//    - render
-//    - getSnapshotBeforeUpdate
-//  + - componentDidUpdate
-// 3. Unmounting (remove)
-//  + - componentWillUnmount
-// in short(devex)
-// 1. Mounting (create) => componentDidMount
-// 2. Updating (update) => componentDidUpdate
-// 3. Unmounting (remove) => componentWillUnmount
-// eg:
-/*
+dependency array is an array of values that the effect or memoized value depends on.
+
+//@ts-nocheck => do not check ( at the beginning react file)
+in react classes has use-state but functions do not so we use hooks to use use-state in functions
+React component lifecycle methods:
+1. Mounting (create)
+   - constructor
+   - static getDerivedStateFromProps
+   - render
+ + - componentDidMount
+2. Updating (update)
+   - static getDerivedStateFromProps
+   - shouldComponentUpdate
+   - render
+   - getSnapshotBeforeUpdate
+ + - componentDidUpdate
+3. Unmounting (remove)
+ + - componentWillUnmount
+in short(devex)
+1. Mounting (create) => componentDidMount
+2. Updating (update) => componentDidUpdate
+3. Unmounting (remove) => componentWillUnmount
+eg:
+
   useEffect(() => {
     console.log("ComponentDidMount", count); // 1. ComponentDidMount
     setCount(count + 1);
@@ -363,11 +364,35 @@ LESSON 55 Develop Products Frontend Page
       console.log("ComponentWillUnmount");
     };
   }, [value]); // => 2. ComponentDidUpdate
-*/
-// Webpage: What you see rendered in your browser, including text, images, and other content.
-// DOM: The representation of the webpage's structure that your browser creates from the HTML document. It includes elements, attributes, and text as nodes in a tree structure.
 
-//
+Webpage: What you see rendered in your browser, including text, images, and other content.
+DOM: The representation of the webpage's structure that your browser creates from the HTML document. It includes elements, attributes, and text as nodes in a tree structure.
+*/
+
+/*  79 Redux
+Plans:
+- Review run of project
+- Learn Redux architecture of our project
+- Pros of Redux Toolkit
+
+Review run of project
+  - run (yarn run build) to compile our project
+  - but, in the end of ts changes to js
+  - if we type 'yarn run dev' it builds 'build' folder
+        - build folder transfers all files in the development process of the project in ts or any to a js file to run them in production
+  - yarn global add serve
+  - serve -s build
+  - yarn global add serve- 
+       - Local:   http://localhost:3000 
+   │   - Network:  http://192.168.1.234:3000 
+
+
+
+
+
+
+
+*/
 
 // TODO: questions
 // What is Destruction
