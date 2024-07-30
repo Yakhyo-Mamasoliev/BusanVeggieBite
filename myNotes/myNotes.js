@@ -146,10 +146,6 @@ Middleware: Middleware acts like a filter for requests, performing actions befor
 
 /* 
 
-
-
-
-
 Notes
 - Browser only accepts get, not update or delete methods. 
 - get only used for providing pages, while post is used for creating or updating data.
@@ -412,25 +408,37 @@ Learn Redux architecture of our project
   - Redux. Reducer handle entire logic Action => Reducer => Store => View/UI
   - Debugging is the process of finding and fixing errors or bugs in the source code of any software.
     easier in Redux than MVC
+  - Storage is open to all components
 
 Pros of Redux Toolkit
   - Redux Toolkit makes it easier to write good Redux applications and speeds up development,
 
- 
-
-
-
-
-
 37mins  */
+
+/*80-HomePage - Redux Slice and Selectors set up 
+- to do homeScreen Component type integration
+- to do Redux Storage configuration
+- to do Redux Logger Middleware integration
+- to test Redux Architecture
+
+homeScreen Component type integration
+  - 
+  - 
+
+
+
+
+
+
+
+
+71min*/
+
+/*80-HomePage - Redux Slice and Selectors set up 71min*/
 
 // TODO: questions
 // What is Destruction
-// Brian => Id, manually, by hand? (db, go db  change _id to anything, does it work).
 //T-type We are using it for getting object type, right?
-// Din => ViewCount
 // productService.ts -- see pagination method again
-//$skip => skip first n items
-// $limit => limit remaining item to n = show n objects only
 // reexplain using chatgpt for aggregation def
-// Last - Aggregation 1 5.20min
+// TODO: Last - Aggregation 1 5.20min
