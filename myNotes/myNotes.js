@@ -353,8 +353,8 @@ React component lifecycle methods:
 3. Unmounting (remove)
  + - componentWillUnmount
 in short(devex)
-1. Mounting (create) => componentDidMount
-2. Updating (update) => componentDidUpdate
+1. Mounting (create) => componentDidMount (when a certain component is mounted, it works)
+2. Updating (update) => componentDidUpdate()
 3. Unmounting (remove) => componentWillUnmount
 eg:
 
@@ -422,21 +422,15 @@ Pros of Redux Toolkit
 - to test Redux Architecture
 
 homeScreen Component type integration
-  - 
-  - 
+  - Class Component = creating class and make it as an extension for react
+    71min*/
 
-
-
-
-
-
-
-
-71min*/
-
-/*80-HomePage - Redux Slice and Selectors set up 71min*/
+/*80(71min)- HomePage - Redux Slice and Selectors set up
+ */
 
 // TODO: questions
+//
+//Watch ts video
 // What is Destruction
 //T-type We are using it for getting object type, right?
 // productService.ts -- see pagination method again
