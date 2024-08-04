@@ -1,35 +1,40 @@
 import React from "react";
+import { Box, Container, Stack } from "@mui/material";
 import Card from "@mui/joy/Card";
-import { CssVarsProvider } from "@mui/joy/styles";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
+import { CssVarsProvider } from "@mui/joy/styles";
 import CardOverflow from "@mui/joy/CardOverflow";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import { Box, Container, Stack } from "@mui/material";
 
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
-import { retrievePopularDishes } from "./selector";
-import { serverApi } from "../../../lib/config";
+import { retrievePopularDishes } from "../../../../selector";
+import { Product } from "../../../../../../../lib/types/product";
+import { serverApi } from "../../../../../../../lib/config";
 
+/** REDUX SLICE & SELECTOR */
 const popularDishesRetriever = createSelector(
   retrievePopularDishes,
   (popularDishes) => ({ popularDishes })
 );
 
 export default function PopularDishes() {
-  const { popularDishes: list } = useSelector(popularDishesRetriever);
+  const { popularDishes } = useSelector(popularDishesRetriever);
+
+  console.log("popularDishes:", popularDishes);
+
   return (
     <div className="popular-dishes-frame">
       <Container>
         <Stack className="popular-section">
-          <Box className="category-title"> Popular Dishes</Box>
+          <Box className="category-title">Popular Dishes</Box>
           <Stack className="cards-frame">
-            {list.length !== 0 ? (
-              list.map((ele, index) => {
-                const imagePath = `${serverApi}/${ele.productImages}`;
+            {popularDishes.length !== 0 ? (
+              popularDishes.map((ele: Product) => {
+                const imagePath = `${serverApi}/${ele.productImages[0]}`;
                 return (
                   <CssVarsProvider key={ele._id}>
                     <Card className={"card"}>
@@ -87,7 +92,7 @@ export default function PopularDishes() {
                 );
               })
             ) : (
-              <Box className="no-data">New products are not available!</Box>
+              <Box className="no-data">Popular products are not available!</Box>
             )}
           </Stack>
         </Stack>
