@@ -3,7 +3,7 @@
   height: auto;
 }
 
-/* Statistics */
+/** STATISTICS**/
 
 .homepage .static-frame {
   width: 100%;
@@ -24,11 +24,11 @@
   height: 116px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.homepage .static-frame .info .static-box .static-num {
+.homepage .static-frame .info .static-num {
   text-align: center;
   font-family: Poppins;
   font-size: 54px;
@@ -38,7 +38,7 @@
   color: #d7b686;
 }
 
-.homepage .static-frame .info .static-box .static-text {
+.homepage .static-frame .info .static-text {
   text-align: center;
   font-family: Poppins;
   font-size: 20px;
@@ -48,13 +48,28 @@
   color: #d7b586;
 }
 
-/* Popular Dishes */
+/** POPULAR DISHES**/
 
 .homepage .popular-dishes-frame {
   width: 100%;
   height: 580px;
   display: flex;
   background: #f8f8ff;
+}
+
+.homepage .popular-dishes-frame .no-data {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-family: "Popins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 34px;
+  color: #e3c08d;
 }
 
 .homepage .popular-dishes-frame .popular-section {
@@ -83,13 +98,13 @@
   justify-content: space-between;
 }
 
-.homepage .popular-dishes-frame .popular-section .cards-frame .card {
+.homepage .popular-dishes-frame .cards-frame .card {
   min-height: 430px;
   min-width: 300px;
   cursor: pointer;
 }
 
-.homepage .popular-dishes-frame.popular-section .cards-frame .card .card-cover {
+.homepage .popular-dishes-frame .cards-frame .card .card-cover {
   background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.4),
@@ -98,22 +113,7 @@
     linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 300px);
 }
 
-.homepage .new-products-frame .no-data {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: capitalize;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 34px;
-  color: #e3c08d;
-}
-
-/* New Products */
+/** NEW PRODUCTS **/
 
 .homepage .new-products-frame {
   width: 100%;
@@ -145,7 +145,7 @@
 }
 
 .homepage .new-products-frame .main .card {
-  height: 335px;
+  height: 356px;
   width: 290px;
   cursor: pointer;
 }
@@ -162,7 +162,7 @@
   background: #ff9200;
   box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
-  font-family: "Poppins";
+  font-family: "Popins";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -219,7 +219,7 @@
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  font-family: "Poppins";
+  font-family: "Popins";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -227,7 +227,7 @@
   color: #e3c08d;
 }
 
-/* Advertisement */
+/** ADVERTISEMENT **/
 
 .homepage .ads-restaurant-frame {
   width: 100%;
@@ -247,28 +247,27 @@
   overflow: hidden;
 }
 
-/* Active Users */
+/** ACTIVE-USERS BURAK**/
 
 .homepage .active-users-frame {
-  width: 100%;
-  height: 550px;
   background: #f8f8ff;
   display: flex;
+  width: 100%;
+  height: 550px;
 }
 
 .homepage .active-users-frame .main {
-  padding-top: 60px;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 55px;
+  display: flex;
 }
 
 .homepage .active-users-frame .category-title {
-  font-family: "Dancing Script";
   font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
+  font-weight: 750;
+  font-size: 35px;
+  line-height: 40px;
 }
 
 .homepage .cards-frame {
@@ -278,29 +277,28 @@
 }
 
 .homepage .cards-frame .card {
-  margin: 5px;
-  min-height: 305px;
-  min-width: 305px;
+  margin: 10px;
+  min-height: 300px;
+  min-width: 310px;
   cursor: pointer;
 }
 
 .homepage .cards-frame .member-nickname {
-  font-size: medium;
+  font-size: large;
   text-align: center;
 }
 
 .homepage .cards-frame .no-data {
   width: 100%;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 34px;
+  font-weight: 410;
+  font-size: 35px;
+  line-height: 30px;
   color: #e3c08d;
 }
 
