@@ -22,10 +22,23 @@ const actionDispatch = (dispatch: Dispatch) => ({
 
 export default function HomePage() {
   const { setPopularDishes } = actionDispatch(useDispatch());
-  const { popularDishes } = useSelector(popularDishesRetriever);
 
   console.log(process.env.REACT_APP_API_URL);
-  useEffect(() => {}, []);
+
+  useEffect(() => {
+    const product = new ProductService();
+    product
+      .getProducts({
+        page: 1,
+        limit: 4,
+        order: "productViews",
+        productCollection: ProductCollection.DISH,
+      })
+      .then((data) => {
+        setPopularDishes(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className={"homepage"}>
