@@ -9,21 +9,25 @@ import { ThemeProvider } from "@mui/material/styles";
 import "./css/index.css";
 import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom";
+import ContextProvider from "./app/context/ContextProvider";
 
 // Retrieve the DOM element with the id "root"
-const container = document.getElementById("root")!; 
+const container = document.getElementById("root")!;
 // Retrieve the DOM element with the id "root"
-const root = createRoot(container); 
+const root = createRoot(container);
 
-root.render( // method is used to render the React application into the DOM
-  <React.StrictMode>  
+root.render(
+  // method is used to render the React application into the DOM
+  <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <App />
-        </Router>
-      </ThemeProvider>
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <App />
+          </Router>
+        </ThemeProvider>
+      </ContextProvider>
     </Provider>
   </React.StrictMode>
 );
