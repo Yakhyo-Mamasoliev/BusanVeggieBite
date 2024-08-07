@@ -2,16 +2,23 @@ import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { CartItem } from "../../lib/types/search";
 
-export default function HomeNavbar() {
+interface HomeNavbarProps {
+  cartItems: CartItem[];
+}
+
+export default function HomeNavbar(props: HomeNavbarProps) {
+  const { cartItems } = props;
   const authMember = null;
   const [count, setCount] = useState<number>(0);
-  const [value, setValue] = useState<boolean>(true); // here useState has two arg 1. value its type is boolean, with initial value true. 2.setValue function to update value
+  const [value, setvalue] = useState<boolean>(true);
 
   useEffect(() => {
     console.log("ComponentDidMount", count); // 1. ComponentDidMount
     setCount(count + 1);
-    return () => { // 3. ComponentWillUnmount
+    return () => {
+      // 3. ComponentWillUnmount
       console.log("ComponentWillUnmount");
     };
   }, [value]); // => 2. ComponentDidUpdate
@@ -19,7 +26,7 @@ export default function HomeNavbar() {
   // Handlers
 
   const buttonHandler = () => {
-    setValue(!value);
+    setvalue(!value);
   };
 
   return (
@@ -61,7 +68,7 @@ export default function HomeNavbar() {
                 Help
               </NavLink>
             </Box>
-            <Basket />
+            <Basket cartItems={cartItems} />
 
             {!authMember ? (
               <Box>
