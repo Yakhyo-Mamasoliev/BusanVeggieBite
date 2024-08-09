@@ -95,10 +95,14 @@ export default function OrdersPage() {
           <Box className={"order-info-box"}>
             <Box className={"member-box"}>
               <div className={"order-user-img"}>
-                src=
-                {authMember?.memberImage
-                  ? `${serverApi}/${authMember.memberImage}`
-                  : "/icons/default-user.svg"}
+                <img
+                  src={
+                    authMember?.memberImage
+                      ? `${serverApi}/${authMember.memberImage}`
+                      : "/icons/default-user.svg"
+                  }
+                  className={"order-user-avatar"}
+                />
                 <div className={"order-user-icon-box"}>
                   <img
                     src={
