@@ -610,9 +610,17 @@ React component lifecycle methods:
 3. Unmounting (remove)
  + - componentWillUnmount
 in short(devex)
-1. Mounting (create) => componentDidMount (when a certain component is mounted, it works)
-2. Updating (update) => componentDidUpdate()
-3. Unmounting (remove) => componentWillUnmount
+
+1. **Mounting (create)**: `componentDidMount()` - This lifecycle method runs after a component is added to the DOM for the first time.
+
+2. **Updating (update)**: `componentDidUpdate()` - This method runs after a component updates due to changes in state or props.
+
+3. **Unmounting (remove)**: `componentWillUnmount()` - This method runs before a component is removed from the DOM, allowing you to clean up resources.
+  - stage:  built-in object used to store data that can change over time within a component
+  - Props (short for "properties") are used to pass data from a parent component to a child component. They are read-only and cannot be modified by the child component.
+
+
+
 eg:
 
   useEffect(() => {
@@ -647,15 +655,15 @@ Review run of project
 Learn Redux architecture of our project
   - library but most famous when its is used with react 
   - Redux is based on Flux architecture
-  1. Vie/UI
+  1. Vie/UI // during that useEffect works
   2. Action = Action Creator + Action Type 
   3. Reducer
   4. Store
 
   Additional Concept
-    1. dispatch(so called 'slice') => Sends actions to the store to update the state.
+    1. dispatch(so called 'slice' flow in Redux Toolkit) => Sends actions to the store to update the state.
       Action => Reducer 
-    2. subscribe(so called 'selector') => Listens for state changes in the store. 
+    2. subscribe(so called 'selector' flow in Redux Toolkit) => Listens for state changes in the store. 
       Reducer => Store => View/UI
 
   - Follows the unidirectional data flow => one orderly direction
